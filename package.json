@@ -1,0 +1,45 @@
+{
+  "name": "abdcenter-api",
+  "version": "1.0.0",
+  "description": "Web services for handling events center api",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf bin && mkdir bin && babel -d ./bin ./src",
+    "start": "node ./bin/app.js",
+    "start:dev": "nodemon --exec babel-node src/app.js",
+    "migration:prod": "export NODE_ENV=production && babel-node src/database/migrations",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victor-nach/abdcenter-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victor-nach/abdcenter-api/issues"
+  },
+  "homepage": "https://github.com/victor-nach/abdcenter-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "nodemailer": "^6.3.0",
+    "pg": "^7.12.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1"
+  }
+}
